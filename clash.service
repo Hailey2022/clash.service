@@ -1,0 +1,12 @@
+[Unit]
+Description=meta
+After=network.target
+
+[Service]
+ExecStart=/root/clash -d /root/config/ 
+#KillMode=process
+Restart=on-failure
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
